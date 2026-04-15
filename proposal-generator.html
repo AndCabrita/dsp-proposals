@@ -1352,7 +1352,7 @@ function renderStep2(){
 
   document.getElementById('step-2').innerHTML=`
     <div class="sec-head"><h2>Select Equipment</h2><p>Tap to select. Add-ons, offers and discounts per product.</p></div>
-    <div class="cat-strip">${CATS.map(c=>`<button class="ctab ${S.cat===c?'on':''}" data-cat="${c}">${c}</button>`).join('')}</div>
+    <div class="cat-strip">${CATS_FN().map(c=>`<button class="ctab ${S.cat===c?'on':''}" data-cat="${c}">${c}</button>`).join('')}</div>
     ${prodHTML}
     <div class="card" style="margin-top:20px">
       <div class="card-label">Add Custom Item</div>
