@@ -875,6 +875,7 @@ const totalPL=()=>allItems().reduce((s,i)=>s+itemPL(i),0);
 
 // ══ RENDER APP ════════════════════════════
 function render(){
+window.scrollTo(0,0);
   saveDraft(); // auto-save on every render
   const inDoc=S.step===4;
   document.getElementById('app-bar').style.display=inDoc?'none':'flex';
