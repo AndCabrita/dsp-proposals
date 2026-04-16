@@ -979,7 +979,7 @@ function renderStep1(){
     S={step:1,lang:S.lang,client:{name:'',company:'',email:'',phone:'',venue:'',nif:'',notes:''},selected:[],custom:[],newC:{name:'',ref:'',qty:1,unitPrice:0,detail:''},cat:'All',error:null,propNum:null,notesInternal:'',notesClient:'',paymentCondition:'A combinar.',deliveryPreset:'imediato',deliveryCondition:'Imediato, salvo rutura de stock na data de aceitação.'};
     _iid=0; clearDraft(); render();
   });
-  document.getElementById('s1n').addEventListener('click',()=>{S.step=2;render();});
+  document.getElementById('s1n').addEventListener('click',()=>{S.step=2;render();window.scrollTo(0,0);});
 }
 
 function renderStep2(){
@@ -1390,7 +1390,7 @@ function renderStep2(){
     render();
   });
   document.querySelectorAll('.rm').forEach(b=>b.addEventListener('click',()=>{S.custom=S.custom.filter(i=>i.id!==b.dataset.rmid);render();}));
-  document.getElementById('s2b').addEventListener('click',()=>{S.step=1;render();});
+  document.getElementById('s2b').addEventListener('click',()=>{S.step=1;render();window.scrollTo(0,0);});
   document.getElementById('s2n').addEventListener('click',async()=>{
     S.step=3;
     render();
@@ -1537,7 +1537,7 @@ function renderStep3(){
       <button class="btn btn-primary" id="s3g">✦ Gerar Proposta</button>
     </div>`;
 
-  document.getElementById('s3b').addEventListener('click',()=>{S.step=2;render();});
+  document.getElementById('s3b').addEventListener('click',()=>{S.step=2;render();window.scrollTo(0,0);});
 
   document.getElementById('s3g').addEventListener('click',generateProposal);
   const fp=document.getElementById('f-propnum');
@@ -1882,7 +1882,7 @@ function renderHistoryModal(){
 }
 
 function renderDoc(){
-  document.getElementById('btn-edit').onclick=()=>{S.step=3;render();};
+  document.getElementById('btn-edit').onclick=()=>{S.step=3;render();window.scrollTo(0,0);};
   document.getElementById('btn-new').onclick=()=>{
     S={step:1,lang:S.lang,client:{name:'',company:'',email:'',phone:'',venue:'',nif:'',notes:''},selected:[],custom:[],newC:{name:'',ref:'',qty:1,unitPrice:0,detail:''},cat:'All',error:null,propNum:null,notesInternal:'',notesClient:'',paymentCondition:'A combinar.',deliveryPreset:'imediato',deliveryCondition:'Imediato, salvo rutura de stock na data de aceitação.'};_iid=0;clearDraft();
     render();
