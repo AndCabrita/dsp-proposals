@@ -1326,7 +1326,7 @@ function renderStep2(){
     });
   });
   // addon discount type toggle
-  document.querySelectorAll('.dtt[data-aodprod]').forEach(btn=>{
+  document.querySelectorAll('.dtt[data-aodiid]').forEach(btn=>{
     btn.addEventListener('click',e=>{
       e.stopPropagation();
       const sel=S.selected.find(i=>i._iid===parseInt(btn.dataset.aodiid)); if(!sel) return;
