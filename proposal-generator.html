@@ -1917,6 +1917,8 @@ function renderDoc(){
       items:items.map(i=>({name:i.name,qty:i.qty,pvp:itemTotal(i),cost:itemCost(i),pl:itemPL(i),margin:itemMarginPct(i)})),
       totalPVP:gt, totalCost:totalCost(), totalPL:totalPL(),
       totalPVPwithVAT:gtVat, lang:S.lang, status:'Proposta Enviada'
+      paymentCondition:S.paymentCondition||'',
+      deliveryCondition:S.deliveryCondition||'',
     }),1500);
   };
 
@@ -1953,6 +1955,8 @@ function renderDoc(){
       items:items.map(i=>({name:i.name,qty:i.qty,pvp:itemTotal(i),cost:itemCost(i),pl:itemPL(i),margin:itemMarginPct(i)})),
       totalPVP:gt, totalCost:totalCost(), totalPL:totalPL(),
       totalPVPwithVAT:gtVat, lang:S.lang, status:'E-mail Aberto'
+      paymentCondition:S.paymentCondition||'',
+      deliveryCondition:S.deliveryCondition||'',
     });
   };
 
