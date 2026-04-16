@@ -1953,7 +1953,7 @@ function renderDoc(){
       email:c.email||'', phone:c.phone||'', location:c.venue||'',
       items:items.map(i=>({name:i.name,qty:i.qty,pvp:itemTotal(i),cost:itemCost(i),pl:itemPL(i),margin:itemMarginPct(i)})),
       totalPVP:gt, totalCost:totalCost(), totalPL:totalPL(),
-      totalPVPwithVAT:gtVat, lang:S.lang, status:'E-mail Aberto'
+      totalPVPwithVAT:gtVat, lang:S.lang, status:'E-mail Aberto',
       paymentCondition:S.paymentCondition||'',
       deliveryCondition:S.deliveryCondition||'',
     });
